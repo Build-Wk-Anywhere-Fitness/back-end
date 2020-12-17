@@ -9,14 +9,21 @@
     "express": "^4.17.1",
     "helmet": "^4.2.0",
     "jsonwebtoken": "^8.5.1",
-    "nodemon": "^2.0.6"
+    "knex": "^0.21.13",
+    "nodemon": "^2.0.6",
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
     "eslint": "^7.15.0"
   },
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "migrateup": "knex migrate:up",
+    "migratedown": "knex migrate:down",
+    "migratelatest": "knex migrate:latest",
+    "migraterollback": "knex migrate:rollback",
+    "seed": "knex seed:run"
   },
   "repository": {
     "type": "git",
