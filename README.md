@@ -1,8 +1,10 @@
 # back-end
 
-## endpoints
+Anywhere Fitness API
 
-### auth
+## Endpoints
+
+### Auth
 
 | Method | Endpoint       |
 | ------ | -------------- |
@@ -10,14 +12,14 @@
 | POST   | /auth/login    |
 | GET    | /auth/logout   |
 
-### users
+### Users
 
 | Method | Endpoint       |
 | ------ | -------------- |
 | GET    | /api/users     |
 | GET    | /api/users/:id |
 
-### classes
+### Classes
 
 | Method | Endpoint                |
 | ------ | ----------------------- |
