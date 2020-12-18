@@ -1,5 +1,4 @@
 const sharedConfig = {
-  client: "sqlite3",
   useNullAsDefault: true,
   migrations: { directory: "./data/migrations" },
   pool: {
@@ -10,16 +9,19 @@ const sharedConfig = {
 module.exports = {
   development: {
     ...sharedConfig,
+    client: "sqlite3",
     connection: { filename: "./data/anywhere-fitness.db3" },
     seeds: { directory: "./data/seeds" },
   },
   testing: {
     ...sharedConfig,
+    client: "sqlite3",
     connection: { filename: "./data/test.db3" },
   },
   production: {
     ...sharedConfig,
-    connection: { filename: "./data/anywhere-fitness.db3" },
+    client: "pg",
+    connection: process.env.DATABASE_URL,
     seeds: { directory: "./data/seeds" },
   },
 };
