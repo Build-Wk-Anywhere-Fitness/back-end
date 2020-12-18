@@ -5,6 +5,10 @@ async function add(user) {
   return findById(id);
 }
 
+function getAll() {
+  return db("users");
+}
+
 function findBy(filter) {
   return db("users").where(filter).orderBy("id");
 }
@@ -15,6 +19,7 @@ function findById(id) {
 
 module.exports = {
   add,
+  getAll,
   findBy,
   findById,
 };
