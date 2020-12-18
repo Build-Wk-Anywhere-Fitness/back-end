@@ -47,10 +47,6 @@ router.post("/login", (req, res) => {
   }
 });
 
-router.get("/logout", (req, res) => {
-  //
-});
-
 function makeToken(user) {
   const payload = {
     subject: user.id,

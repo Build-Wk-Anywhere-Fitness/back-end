@@ -10,7 +10,6 @@ Anywhere Fitness API
 | ------ | -------------- |
 | POST   | /auth/register |
 | POST   | /auth/login    |
-| GET    | /auth/logout   |
 
 ### Users
 
