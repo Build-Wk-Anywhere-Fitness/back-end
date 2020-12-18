@@ -4,6 +4,8 @@ Anywhere Fitness API
 
 ## Endpoints
 
+https://build-wk-anywhere-fitness.herokuapp.com/
+
 ### Auth
 
 | Method | Endpoint       |
