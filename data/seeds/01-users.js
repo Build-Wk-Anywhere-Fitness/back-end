@@ -3,8 +3,8 @@ exports.seed = function (knex) {
     .truncate()
     .then(function () {
       return knex("users").insert([
-        { username: "admin", password: "1234", role: "instructor" },
-        { username: "user", password: "1234", role: "client" },
+        { username: "Instructor", password: "password", role: "instructor" },
+        { username: "Client", password: "password", role: "client" },
       ]);
     });
 };

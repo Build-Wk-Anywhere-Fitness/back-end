@@ -8,10 +8,10 @@ https://build-wk-anywhere-fitness.herokuapp.com/
 
 ### Auth
 
-| Method | Endpoint       |
-| ------ | -------------- |
-| POST   | /auth/register |
-| POST   | /auth/login    |
+| Method | Endpoint           |
+| ------ | ------------------ |
+| POST   | /api/auth/register |
+| POST   | /api/auth/login    |
 
 ### Users
 
