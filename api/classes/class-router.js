@@ -16,39 +16,39 @@ router.delete("/:id", (req, res) => {
   //
 });
 
-router.get("api/classes", (req, res) => {
+router.get("/", (req, res) => {
   //
 });
 
-router.get("api/classes/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   //
 });
 
-router.get("api/classes/time", (req, res) => {
+router.get("/time", (req, res) => {
   //
 });
 
-router.get("api/classes/date", (req, res) => {
+router.get("/date", (req, res) => {
   //
 });
 
-router.get("api/classes/duration", (req, res) => {
+router.get("/duration", (req, res) => {
   //
 });
 
-router.get("api/classes/type", (req, res) => {
+router.get("/type", (req, res) => {
   //
 });
 
-router.get("api/classes/intensity", (req, res) => {
+router.get("/intensity", (req, res) => {
   //
 });
 
-router.get("api/classes/location", (req, res) => {
+router.get("/location", (req, res) => {
   //
 });
 
-router.get("api/classes/instructor", (req, res) => {
+router.get("/instructor", (req, res) => {
   //
 });
 
