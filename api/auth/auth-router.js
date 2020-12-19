@@ -22,7 +22,7 @@ router.post("/register", (req, res) => {
         res.status(500).json(err.message);
       });
   } else {
-    res.status(400).json("username and password required");
+    res.status(400).json("username, password, and role required");
   }
 });
 
