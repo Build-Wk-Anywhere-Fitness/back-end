@@ -21,7 +21,14 @@ router.put("/:id", (req, res) => {
 
 // checkRole("instructor")
 router.delete("/:id", (req, res) => {
-  //
+  const { id } = req.params;
+  Class.remove(id)
+    .then(() => {
+      res.status(200).json(`Class ${id} has been removed`);
+    })
+    .catch((err) => {
+      res.status(500).json(err.message);
+    });
 });
 
 router.get("/", (req, res) => {

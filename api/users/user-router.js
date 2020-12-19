@@ -22,4 +22,15 @@ router.get("/:id", (req, res) => {
     });
 });
 
+router.delete("/:id", (req, res) => {
+  const { id } = req.params;
+  User.remove(id)
+    .then(() => {
+      res.status(200).json(`User ${id} has been removed`);
+    })
+    .catch((err) => {
+      res.status(500).json(err.message);
+    });
+});
+
 module.exports = router;
