@@ -5,6 +5,10 @@ async function add(data) {
   return findById(id);
 }
 
+function edit(id, changes) {
+  return db("classes").where({ id }).update(changes);
+}
+
 function remove(id) {
   return db("classes").where({ id }).del();
 }
@@ -14,7 +18,7 @@ function getAll() {
 }
 
 function findBy(filter) {
-  return db("classes").where(filter).orderBy("id");
+  return db("classes").where(filter).orderBy(filter);
 }
 
 function findById(id) {
@@ -23,6 +27,7 @@ function findById(id) {
 
 module.exports = {
   add,
+  edit,
   remove,
   getAll,
   findBy,

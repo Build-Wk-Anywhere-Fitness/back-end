@@ -22,6 +22,16 @@ router.get("/:id", (req, res) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+  User.edit(req.params.id, req.body)
+    .then((editedUser) => {
+      res.status(200).json(editedUser);
+    })
+    .catch((err) => {
+      res.status(500).json(err.message);
+    });
+});
+
 router.delete("/:id", (req, res) => {
   const { id } = req.params;
   User.remove(id)

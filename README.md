@@ -19,6 +19,7 @@ https://build-wk-anywhere-fitness.herokuapp.com/
 | ------ | -------------- |
 | GET    | /api/users     |
 | GET    | /api/users/:id |
+| PUT    | /api/users/:id |
 | DELETE | /api/users/:id |
 
 ### Classes

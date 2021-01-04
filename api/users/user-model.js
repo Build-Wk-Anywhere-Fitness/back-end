@@ -5,6 +5,10 @@ async function add(user) {
   return findById(id);
 }
 
+function edit(id, changes) {
+  return db("users").where({ id }).update(changes);
+}
+
 function remove(id) {
   return db("users").where({ id }).del();
 }
@@ -23,6 +27,7 @@ function findById(id) {
 
 module.exports = {
   add,
+  edit,
   remove,
   getAll,
   findBy,
