@@ -1,10 +1,9 @@
 const router = require("express").Router();
 
 const Class = require("./class-model");
-// const { checkRole } = require("../middleware/checkRole");
+const checkRole = require("../middleware/checkRole");
 
-// checkRole("instructor")
-router.post("/", (req, res) => {
+router.post("/", checkRole("instructor"), (req, res) => {
   Class.add(req.body)
     .then((newClass) => {
       res.status(201).json(newClass);
@@ -14,8 +13,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// checkRole("instructor")
-router.put("/:id", (req, res) => {
+router.put("/:id", checkRole("instructor"), (req, res) => {
   Class.edit(req.params.id, req.body)
     .then((editedClass) => {
       res.status(200).json(editedClass);
@@ -25,8 +23,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-// checkRole("instructor")
-router.delete("/:id", (req, res) => {
+router.delete("/:id", checkRole("instructor"), (req, res) => {
   const { id } = req.params;
   Class.remove(id)
     .then(() => {
