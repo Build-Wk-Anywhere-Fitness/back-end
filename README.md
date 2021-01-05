@@ -17,10 +17,10 @@ https://build-wk-anywhere-fitness.herokuapp.com/
 
 | Method | Endpoint       | Description                       | Requires                 | Authorized |
 | ------ | -------------- | --------------------------------- | ------------------------ | ---------- |
-| GET    | /api/users     | Returns all users in the database | n/a                      | Instructor |
-| GET    | /api/users/:id | Returns user with matching id     | n/a                      | Instructor |
-| PUT    | /api/users/:id | Updates user with matching id     | all fields being updated | Instructor |
-| DELETE | /api/users/:id | Deletes user with matching id     | n/a                      | Instructor |
+| GET    | /api/users     | Returns all users in the database | n/a                      | Admin      |
+| GET    | /api/users/:id | Returns user with matching id     | n/a                      | Admin      |
+| PUT    | /api/users/:id | Updates user with matching id     | all fields being updated | Admin      |
+| DELETE | /api/users/:id | Deletes user with matching id     | n/a                      | Admin      |
 
 ### Classes
 
