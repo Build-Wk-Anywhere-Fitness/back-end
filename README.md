@@ -1,6 +1,4 @@
-# back-end
-
-Anywhere Fitness API
+# Anywhere Fitness
 
 ## Endpoints
 
