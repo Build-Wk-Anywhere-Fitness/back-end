@@ -8,10 +8,10 @@ https://build-wk-anywhere-fitness.herokuapp.com/
 
 ### Auth
 
-| Method | Endpoint           | Description                   | Requires              | Authorized          |
-| ------ | ------------------ | ----------------------------- | --------------------- | ------------------- |
-| POST   | /api/auth/register | Registers new user            | Username and password | Anyone              |
-| POST   | /api/auth/login    | Grants access to user account | Username and password | Instructor / Client |
+| Method | Endpoint           | Description                   | Requires                     | Authorized          |
+| ------ | ------------------ | ----------------------------- | ---------------------------- | ------------------- |
+| POST   | /api/auth/register | Registers new user            | Username, password, and role | Anyone              |
+| POST   | /api/auth/login    | Grants access to user account | Username and password        | Instructor / Client |
 
 ### Users
 
