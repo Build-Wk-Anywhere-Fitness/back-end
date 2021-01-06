@@ -37,10 +37,10 @@ https://build-wk-anywhere-fitness.herokuapp.com/
 | DELETE | /api/classes/:id        | Deletes class with matching id                | n/a                                                                                         | Instructor          |
 | GET    | /api/classes            | Returns all classes in the database           | n/a                                                                                         | Instructor / Client |
 | GET    | /api/classes/:id        | Returns class with matching id                | n/a                                                                                         | Instructor / Client |
-| GET    | /api/classes/time       | Returns classes with matching start time      | start_time                                                                                  | Instructor / Client |
-| GET    | /api/classes/date       | UNDER MAINTENANCE                             | date                                                                                        | Instructor / Client |
-| GET    | /api/classes/duration   | Returns classes with matching duration        | duration                                                                                    | Instructor / Client |
-| GET    | /api/classes/type       | Returns classes with matching type            | type                                                                                        | Instructor / Client |
-| GET    | /api/classes/intensity  | Returns classes with matching intensity level | intensity_level                                                                             | Instructor / Client |
-| GET    | /api/classes/location   | Returns classes with matching location        | location                                                                                    | Instructor / Client |
-| GET    | /api/classes/instructor | UNDER MAINTENANCE                             | instructor                                                                                  | Instructor / Client |
+| POST   | /api/classes/time       | Returns classes with matching start time      | start_time                                                                                  | Instructor / Client |
+| POST   | /api/classes/date       | UNDER MAINTENANCE                             | date                                                                                        | Instructor / Client |
+| POST   | /api/classes/duration   | Returns classes with matching duration        | duration                                                                                    | Instructor / Client |
+| POST   | /api/classes/type       | Returns classes with matching type            | type                                                                                        | Instructor / Client |
+| POST   | /api/classes/intensity  | Returns classes with matching intensity level | intensity_level                                                                             | Instructor / Client |
+| POST   | /api/classes/location   | Returns classes with matching location        | location                                                                                    | Instructor / Client |
+| POST   | /api/classes/instructor | UNDER MAINTENANCE                             | instructor                                                                                  | Instructor / Client |
