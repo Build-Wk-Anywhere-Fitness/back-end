@@ -54,8 +54,10 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.get("/time", (req, res) => {
-  Class.findBy(/* query */)
+router.post("/time", (req, res) => {
+  const { start_time } = req.body;
+
+  Class.findBy("start_time", start_time)
     .then((data) => {
       res.status(200).json(data);
     })
@@ -64,8 +66,20 @@ router.get("/time", (req, res) => {
     });
 });
 
-router.get("/date", (req, res) => {
-  Class.findBy(/* query */)
+// router.post("/date", (req, res) => {
+//   Class.findBy(/* query */)
+//     .then((data) => {
+//       res.status(200).json(data);
+//     })
+//     .catch((err) => {
+//       res.status(500).json(err.message);
+//     });
+// });
+
+router.post("/duration", (req, res) => {
+  const { duration } = req.body;
+
+  Class.findBy("duration", duration)
     .then((data) => {
       res.status(200).json(data);
     })
@@ -74,8 +88,10 @@ router.get("/date", (req, res) => {
     });
 });
 
-router.get("/duration", (req, res) => {
-  Class.findBy(/* query */)
+router.post("/type", (req, res) => {
+  const { type } = req.body;
+
+  Class.findBy("type", type)
     .then((data) => {
       res.status(200).json(data);
     })
@@ -84,8 +100,10 @@ router.get("/duration", (req, res) => {
     });
 });
 
-router.get("/type", (req, res) => {
-  Class.findBy(/* query */)
+router.post("/intensity", (req, res) => {
+  const { intensity_level } = req.body;
+
+  Class.findBy("intensity_level", intensity_level)
     .then((data) => {
       res.status(200).json(data);
     })
@@ -94,8 +112,10 @@ router.get("/type", (req, res) => {
     });
 });
 
-router.get("/intensity", (req, res) => {
-  Class.findBy(/* query */)
+router.post("/location", (req, res) => {
+  const { location } = req.body;
+
+  Class.findBy("location", location)
     .then((data) => {
       res.status(200).json(data);
     })
@@ -104,24 +124,14 @@ router.get("/intensity", (req, res) => {
     });
 });
 
-router.get("/location", (req, res) => {
-  Class.findBy(/* query */)
-    .then((data) => {
-      res.status(200).json(data);
-    })
-    .catch((err) => {
-      res.status(500).json(err.message);
-    });
-});
-
-router.get("/instructor", (req, res) => {
-  Class.findBy(/* query */)
-    .then((data) => {
-      res.status(200).json(data);
-    })
-    .catch((err) => {
-      res.status(500).json(err.message);
-    });
-});
+// router.post("/instructor", (req, res) => {
+//   Class.findBy(/* query */)
+//     .then((data) => {
+//       res.status(200).json(data);
+//     })
+//     .catch((err) => {
+//       res.status(500).json(err.message);
+//     });
+// });
 
 module.exports = router;
