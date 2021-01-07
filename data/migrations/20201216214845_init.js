@@ -15,8 +15,8 @@ exports.up = function (knex) {
       tbl.string("duration", 128).notNullable();
       tbl.string("intensity", 128).notNullable();
       tbl.string("location", 128).notNullable();
-      tbl.integer("attendee_count").notNullable();
       tbl.integer("max_size").notNullable();
+      tbl.integer("attendee_count").notNullable();
     });
 };
 
