@@ -2,7 +2,7 @@
 
 ## Endpoints
 
-https://build-wk-anywhere-fitness.herokuapp.com/
+https://build-wk-anywhere-fitness.herokuapp.com
 
 ### Seed
 

@@ -56,7 +56,6 @@ router.get("/:id", (req, res) => {
 
 router.post("/time", (req, res) => {
   const { start_time } = req.body;
-
   Class.findBy("start_time", start_time)
     .then((data) => {
       res.status(200).json(data);
@@ -78,7 +77,6 @@ router.post("/time", (req, res) => {
 
 router.post("/duration", (req, res) => {
   const { duration } = req.body;
-
   Class.findBy("duration", duration)
     .then((data) => {
       res.status(200).json(data);
@@ -90,7 +88,6 @@ router.post("/duration", (req, res) => {
 
 router.post("/type", (req, res) => {
   const { type } = req.body;
-
   Class.findBy("type", type)
     .then((data) => {
       res.status(200).json(data);
@@ -102,7 +99,6 @@ router.post("/type", (req, res) => {
 
 router.post("/intensity", (req, res) => {
   const { intensity_level } = req.body;
-
   Class.findBy("intensity_level", intensity_level)
     .then((data) => {
       res.status(200).json(data);
@@ -114,7 +110,6 @@ router.post("/intensity", (req, res) => {
 
 router.post("/location", (req, res) => {
   const { location } = req.body;
-
   Class.findBy("location", location)
     .then((data) => {
       res.status(200).json(data);
