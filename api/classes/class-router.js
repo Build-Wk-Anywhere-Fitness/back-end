@@ -2,8 +2,9 @@ const router = require("express").Router();
 
 const Class = require("./class-model");
 const checkRole = require("../middleware/checkRole");
+const { validateClass } = require("../middleware/validateClass");
 
-router.post("/", checkRole("instructor"), (req, res) => {
+router.post("/", [checkRole("instructor"), validateClass], (req, res) => {
   Class.add(req.body)
     .then((newClass) => {
       res.status(201).json(newClass);
@@ -58,7 +59,7 @@ router.get("/:id", (req, res) => {
 router.post("/type", (req, res) => {
   const { type } = req.body;
 
-  Class.findBy("type", type)
+  Class.findBy({ type: type })
     .then((data) => {
       res.status(200).json(data);
     })
@@ -70,7 +71,7 @@ router.post("/type", (req, res) => {
 router.post("/date", (req, res) => {
   const { date } = req.body;
 
-  Class.findBy("date", date)
+  Class.findBy({ date: date })
     .then((data) => {
       res.status(200).json(data);
     })
@@ -82,7 +83,7 @@ router.post("/date", (req, res) => {
 router.post("/time", (req, res) => {
   const { time } = req.body;
 
-  Class.findBy("time", time)
+  Class.findBy({ time: time })
     .then((data) => {
       res.status(200).json(data);
     })
@@ -94,7 +95,7 @@ router.post("/time", (req, res) => {
 router.post("/duration", (req, res) => {
   const { duration } = req.body;
 
-  Class.findBy("duration", duration)
+  Class.findBy({ duration: duration })
     .then((data) => {
       res.status(200).json(data);
     })
@@ -106,7 +107,7 @@ router.post("/duration", (req, res) => {
 router.post("/intensity", (req, res) => {
   const { intensity } = req.body;
 
-  Class.findBy("intensity", intensity)
+  Class.findBy({ intensity: intensity })
     .then((data) => {
       res.status(200).json(data);
     })
@@ -118,7 +119,7 @@ router.post("/intensity", (req, res) => {
 router.post("/location", (req, res) => {
   const { location } = req.body;
 
-  Class.findBy("location", location)
+  Class.findBy({ location: location })
     .then((data) => {
       res.status(200).json(data);
     })

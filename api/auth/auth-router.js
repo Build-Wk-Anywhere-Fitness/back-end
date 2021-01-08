@@ -4,8 +4,10 @@ const bcryptjs = require("bcryptjs");
 const User = require("../users/user-model");
 const { isValid } = require("../users/user-service");
 const { generateToken } = require("../../utils/generateToken");
+const { checkPayload } = require("../middleware/checkPayload");
+const { checkUsernameUnique } = require("../middleware/checkUsernameUnique");
 
-router.post("/register", (req, res) => {
+router.post("/register", [checkPayload, checkUsernameUnique], (req, res) => {
   const credentials = req.body;
 
   if (isValid(credentials)) {

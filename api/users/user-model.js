@@ -17,6 +17,10 @@ function getAll() {
   return db("users");
 }
 
+function findBy(filter) {
+  return db("users").where(filter).orderBy("id");
+}
+
 function findById(id) {
   return db("users").where({ id }).first();
 }
@@ -26,5 +30,6 @@ module.exports = {
   edit,
   remove,
   getAll,
+  findBy,
   findById,
 };
