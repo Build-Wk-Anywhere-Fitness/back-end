@@ -4,8 +4,10 @@ const bcryptjs = require("bcryptjs");
 const User = require("../users/user-model");
 const { isValid } = require("../users/user-service");
 const { generateToken } = require("../../utils/generateToken");
+const { checkPayload } = require("../middleware/checkPayload");
+const { checkUsernameUnique } = require("../middleware/checkUsernameUnique");
 
-router.post("/register", (req, res) => {
+router.post("/register", [checkPayload, checkUsernameUnique], (req, res) => {
   const credentials = req.body;
 
   if (isValid(credentials)) {
@@ -18,10 +20,10 @@ router.post("/register", (req, res) => {
         res.status(201).json(user);
       })
       .catch((err) => {
-        res.status(500).json(err.message);
+        res.status(500).json({ error: err.message });
       });
   } else {
-    res.status(400).json("Username, password, and role required");
+    res.status(400).json({ error: "Username, password, and role required" });
   }
 });
 
@@ -38,14 +40,14 @@ router.post("/login", (req, res) => {
             .status(200)
             .json({ message: `Welcome, ${user.username}`, token, role });
         } else {
-          res.status(401).json("Invalid credentials");
+          res.status(401).json({ error: "Invalid credentials" });
         }
       })
       .catch((err) => {
-        res.status(500).json(err.message);
+        res.status(500).json({ error: err.message });
       });
   } else {
-    res.status(400).json("Username and password required");
+    res.status(400).json({ error: "Username and password required" });
   }
 });
 

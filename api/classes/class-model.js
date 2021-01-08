@@ -18,7 +18,7 @@ function getAll() {
 }
 
 function findBy(filter) {
-  return db("classes").where(filter).orderBy(filter);
+  return db("classes").where(filter).orderBy("id");
 }
 
 function findById(id) {
